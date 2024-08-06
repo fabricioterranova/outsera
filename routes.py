@@ -52,8 +52,8 @@ def get_producers_winners():
                 "followingWin": years[max_interval_index + 1]
             })
 
-    min_interval_producers = sorted(min_interval_producers, key=lambda x: x['interval'])
-    max_interval_producers = sorted(max_interval_producers, key=lambda x: x['interval'], reverse=True)
+    min_interval_producers = min(min_interval_producers, key=lambda x: x['interval'])
+    max_interval_producers = max(max_interval_producers, key=lambda x: x['interval'])
 
     return jsonify({
         "min": min_interval_producers,

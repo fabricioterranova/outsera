@@ -42,7 +42,7 @@ class MovieModel(db.Model):
     @classmethod
     def persist_csv_to_table(cls):
 
-        path = 'Outsera/datasource/movielist.csv'
+        path = 'datasource/movielist.csv'
         data_csv = pd.read_csv(path, sep=';')
 
         for _, row in data_csv.iterrows():
@@ -59,7 +59,7 @@ class MovieModel(db.Model):
 
     @classmethod
     def persist_csv_to_table_for_test(cls):
-        path = 'Outsera/datasource/movielist.csv'
+        path = 'datasource/movielist.csv'
         data_csv = pd.read_csv(path, sep=';')
 
         for _, row in data_csv.iterrows():

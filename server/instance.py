@@ -12,7 +12,7 @@ class Server():
     def run(self):
         url = '0.0.0.0'
         self.app.run(host=url, 
-                     port=8000)
+                     port=5000)
         
 
 server = Server()
